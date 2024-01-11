@@ -1,13 +1,24 @@
 import './styles/style.css'
-import logo from './assets/pizzaria.png';
+import headerLogo from './assets/pizzaria.png';
+import williamAftonImg from './assets/WilliamAfton.png'
+import fanfIcon from './assets/FNAF-bg.png'
 
-const container = document.querySelector('.logo')
+const logoContainer = document.querySelector('.logo')
+const ownerImg = document.querySelector('.owner-img')
+const aboutUsImg = document.querySelector('.about-us-img')
 
 const pizzariaLogo = new Image();
+const ownerWilliamA = new Image();
+const fanfImg = new Image(); 
 
 
 
-pizzariaLogo.src = logo;
+pizzariaLogo.src = headerLogo;
+ownerWilliamA.src = williamAftonImg;
+fanfImg.src = fanfIcon;
 
-container.appendChild(pizzariaLogo);
+logoContainer.appendChild(pizzariaLogo);
+ownerImg.appendChild(ownerWilliamA);
+aboutUsImg.appendChild(fanfImg)
+
 
