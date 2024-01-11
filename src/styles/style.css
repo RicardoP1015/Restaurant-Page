@@ -49,30 +49,58 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 150px;
 }
 
 .about-us {
     text-align: center;
     padding: 0 50px;
-    font-size: 29px;
+    font-size: 26px;
 }
 
 .about-us-img {
     width: 800px;
+    max-height: 450px;
 }
 
-.owner {
+.owner-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 35px;
+    margin-bottom: 150px;
+}
+
+.owner-section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.about-wrapper h3 {
+    font-size: 30px;
 }
 
 .owner-img {
     border: 5px solid white;
-    height: 300px;
-    width: 250px;
+    height: 400px;
+    width: 350px;
     border-radius: 5%;
 }
 
 .owner-img img {
     border-radius: 5%;
 }
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-owner {
+    font-size: 25px;
+    width: 550px;
+    line-height: 1.4;
+}
+
