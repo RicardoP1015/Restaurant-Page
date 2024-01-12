@@ -104,3 +104,22 @@ header {
     line-height: 1.4;
 }
 
+.animatronic-section {
+    text-align: center;
+}
+
+.animatronic-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.fnaf-img {
+    width: 250px;
+}
+
+.about-animatronic {
+    font-size: 25px;
+    padding: 0 25px;
+}
