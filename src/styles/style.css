@@ -7,7 +7,7 @@
 }
 
 #content {
-    background-image: url(/src/assets/fnafFloor.png);
+    /*background-image: url(/src/assets/fnafFloor.png);*/
     background-size: 5%;
 }
 
@@ -199,4 +199,51 @@ header {
 .copy-rights p {
     background-color: #171515c4;
     color: #f1f1f1c2;
+}
+
+.menu-container {
+    display: flex;
+}
+
+.chica-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chica-wrapper h3 {
+    text-align: center;
+    font-size: 30px;
+}
+
+.chica-menu {
+    background-color: yellow;
+    height: 500px;
+}
+
+.menu-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-img {
+    background-color: brown;
+    height: 250px;
+    width: 250px;
+}
+
+.menu-item h3 {
+    font-size: 25px;
+}
+
+.menu-item p {
+    font-size: 18px;
+    padding: 15px;
 }

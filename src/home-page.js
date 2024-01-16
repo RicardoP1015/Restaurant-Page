@@ -5,32 +5,14 @@ import fnafFreddy from './assets/freddyFNAF.png'
 import fnafBonnie from './assets/bonnieFNAF.png'
 import fnafChica from './assets/chicaFNAF.png';
 import fnafFoxy from './assets/foxyFNAF.png';
-import makeElement from './website';
-
-const aboutUSText = `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, magni consectetur! Enim laborum et
-ab? Voluptatem expedita mollitia impedit neque quam vitae, ea quasi culpa dolores, hic, reiciendis
-possimus voluptatum? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad ducimus, excepturi
-culpa sit optio, animi velit ea non, delectus nisi laboriosam illum incidunt inventore. Quisquam
-facilis voluptatum ad dolore illo! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-Repellendus, iusto culpa voluptatum porro minima commodi quasi labore inventore molestiae veniam
-rerum cupiditate, beatae molestias animi tempora. Aperiam, dolor! Error, explicabo!`;
-
-const aboutOwnerText = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi reprehenderit vitae nobis
-voluptatibus laudantium odit non blanditiis doloribus velit qui inventore aperiam, ad dolorum
-eos iure dolorem quo quam eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
-molestiae aperiam laboriosam veniam optio labore cumque consectetur a sapiente? Consequuntur
-sunt ut odio quisquam, voluptatem quas exercitationem sint ea eius.`;
-
-const aboutAnimatronicText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, magnam! Nesciunt omnis mollitia
-veniam eum eveniet maiores sit sunt dolorum quos incidunt inventore magni veritatis, ut
-voluptatum voluptatem ad eaque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-quae dolore quas libero? Veniam quibusdam non repudiandae officia. Pariatur voluptatem
-praesentium quidem assumenda minus corporis accusamus inventore libero atque rem.`;
+import { makeElement } from './website';
+import texts from './text';
 
 function createHeader() {
     const header = document.createElement('header');
 
     const logoDiv = makeElement('div', 'logo', header)
+    logoDiv.classList.add('homeBtn');
     const logoImage = makeElement('img', null, logoDiv, null, 'src', pizzaria);
     const navBar = makeElement('nav', 'nav-bar', header);
     const navList = makeElement('ul', 'nav-list', navBar);
@@ -52,7 +34,7 @@ function createMain() {
     const aboutUsContainer = makeElement('div', 'about-us-container', main);
     const aboutUsImgWrapper = makeElement('div', 'about-us-img', aboutUsContainer);
     const aboutUsImg = makeElement('img', null, aboutUsImgWrapper, null, 'src', fnafBg);
-    const aboutUsP = makeElement('p', 'about-us', aboutUsContainer, aboutUSText);
+    const aboutUsP = makeElement('p', 'about-us', aboutUsContainer, texts.aboutUSText);
 
     const founderTitle = makeElement('div', 'founder-header', main);
     const founderHeader = makeElement('h3', null, founderTitle, 'Founder');
@@ -64,7 +46,7 @@ function createMain() {
     const ownerName = makeElement('div', 'name', ownerSection, 'William Afton');
     const aboutOwnerWrapper = makeElement('div', 'about-wrapper', ownerWrapper);
     const aboutOwnerHeader = makeElement('h3', null, aboutOwnerWrapper, 'About our Amazing Founder');
-    const aboutOwnerP = makeElement('p', 'about-owner', aboutOwnerWrapper, aboutOwnerText);
+    const aboutOwnerP = makeElement('p', 'about-owner', aboutOwnerWrapper, texts.aboutOwnerText);
 
     const animatronicSection = makeElement('div', 'animatronic-section' , main);
     const animatronicSectionHeader = makeElement('h2', null, animatronicSection, 'Amazing Creations');
@@ -74,10 +56,10 @@ function createMain() {
     const freddyHeader = makeElement('h2', null, animatronicTitleWrapper1, 'Freddy');
     const freddyImgWrapper = makeElement('div', 'fnaf-img', animatronicTitleWrapper1);
     const freddyImg = makeElement('img', null, freddyImgWrapper, null, 'src', fnafFreddy);
-    const freddyInfo = makeElement('p', 'about-animatronic', animatronicWrapper1, aboutAnimatronicText);
+    const freddyInfo = makeElement('p', 'about-animatronic', animatronicWrapper1, texts.aboutAnimatronicText);
 
     const animatronicWrapper2 = makeElement('div', 'animatronic-wrapper', animatronicSection);
-    const bonnieInfo = makeElement('p', 'about-animatronic', animatronicWrapper2, aboutAnimatronicText);
+    const bonnieInfo = makeElement('p', 'about-animatronic', animatronicWrapper2, texts.aboutAnimatronicText);
     const animatronicTitleWrapper2 = makeElement('div', 'title-wrapper', animatronicWrapper2);
     const bonnieHeader = makeElement('h2', null, animatronicTitleWrapper2, 'Bonnie');
     const bonnieImgWrapper = makeElement('div', 'fnaf-img', animatronicTitleWrapper2);
@@ -88,10 +70,10 @@ function createMain() {
     const chicaHeader = makeElement('h2', null, animatronicTitleWrapper3, 'Chica');
     const chicaImgWrapper = makeElement('div', 'fnaf-img', animatronicTitleWrapper3);
     const chicaImg = makeElement('img', null, chicaImgWrapper, null, 'src', fnafChica);
-    const chicaInfo = makeElement('p', 'about-animatronic', animatronicWrapper3, aboutAnimatronicText);
+    const chicaInfo = makeElement('p', 'about-animatronic', animatronicWrapper3, texts.aboutAnimatronicText);
 
     const animatronicWrapper4 = makeElement('div', 'animatronic-wrapper', animatronicSection);
-    const foxyInfo = makeElement('p', 'about-animatronic', animatronicWrapper4, aboutAnimatronicText);
+    const foxyInfo = makeElement('p', 'about-animatronic', animatronicWrapper4, texts.aboutAnimatronicText);
     const animatronicTitleWrapper4 = makeElement('div', 'title-wrapper', animatronicWrapper4);
     const foxyHeader = makeElement('h2', null, animatronicTitleWrapper4, 'Foxy');
     const foxyImgWrapper = makeElement('div', 'fnaf-img', animatronicTitleWrapper4);
@@ -111,5 +93,15 @@ function createFooter() {
     return footer;
 }
 
-export { createHeader, createMain, createFooter };
+const loadHomePage = () => {
+    const contentContainer = document.getElementById('content');
+    
+        contentContainer.appendChild(createHeader());
+        contentContainer.appendChild(createMain());
+        contentContainer.appendChild(createFooter());
+    
+    }
+
+
+export  { loadHomePage, createHeader, createFooter };
 
