@@ -1,8 +1,8 @@
 import './styles/style.css';
-import { initWebSite } from './website';
+import { loadHomePage } from './home-page';
 
 
-
+loadHomePage()
 
 
 

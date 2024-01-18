@@ -1,4 +1,5 @@
 import { loadHomePage } from "./home-page";
+import loadMenuPage from "./menu-page";
 
 
 const makeElement = (elem, cl, parent, text, attributeName, attributeValue) => {
@@ -25,17 +26,19 @@ const makeElement = (elem, cl, parent, text, attributeName, attributeValue) => {
     return dom;
 };
 
-const setupNavigation = () => {
-    document.getElementById('homeBtn').addEventListener('click', loadHomePage);
-    document.getElementById('menuBtn').addEventListener('click', loadMenuPage);
-    document.getElementById('orderBtn').addEventListener('click', loadOrderPage);
-    document.getElementById('contactBtn').addEventListener('click', loadContactPage);
-};
+function setupNavigation() {
+    const homeButton = document.getElementById('homeBtn');
+    if (homeButton) {
+        homeButton.addEventListener('click', loadHomePage);
+    }
 
-const initWebSite = () => {
-    loadHomePage();
-    
+    const menuButton = document.getElementById('menuBtn');
+    if (menuButton) {
+
+        menuButton.addEventListener('click', loadMenuPage);
+}
 }
 
-export  { makeElement, initWebSite };
+
+export  { makeElement, setupNavigation };
 

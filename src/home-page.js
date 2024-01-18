@@ -6,22 +6,36 @@ import fnafBonnie from './assets/bonnieFNAF.png'
 import fnafChica from './assets/chicaFNAF.png';
 import fnafFoxy from './assets/foxyFNAF.png';
 import { makeElement } from './website';
+import { setupNavigation } from './website';
 import texts from './text';
 
 function createHeader() {
     const header = document.createElement('header');
 
     const logoDiv = makeElement('div', 'logo', header)
-    logoDiv.classList.add('homeBtn');
     const logoImage = makeElement('img', null, logoDiv, null, 'src', pizzaria);
+    logoImage.setAttribute('id', 'homeBtn')
     const navBar = makeElement('nav', 'nav-bar', header);
     const navList = makeElement('ul', 'nav-list', navBar);
     const menuItems = ['Menu', 'Order', 'Contact'];
 
-    menuItems.forEach(itemText => {
+    menuItems.forEach((itemText, index) => {
         const listItem = document.createElement('li');
         listItem.classList.add('nav-item');
         listItem.textContent = itemText;
+    
+        switch (index) {
+            case 0:
+                listItem.setAttribute('id', 'menuBtn');
+                break;
+            case 1:
+                listItem.setAttribute('id', 'orderBtn');
+                break;
+            case 2:
+                listItem.setAttribute('id', 'contactBtn');
+                break;
+        }
+    
         navList.appendChild(listItem);
     });
 
@@ -79,7 +93,7 @@ function createMain() {
     const foxyImgWrapper = makeElement('div', 'fnaf-img', animatronicTitleWrapper4);
     const foxyImg = makeElement('img', null, foxyImgWrapper, null, 'src', fnafFoxy);
 
-    return main
+    return main;
 }
 
 function createFooter() {
@@ -95,11 +109,13 @@ function createFooter() {
 
 const loadHomePage = () => {
     const contentContainer = document.getElementById('content');
+    contentContainer.innerHTML = '';
     
         contentContainer.appendChild(createHeader());
         contentContainer.appendChild(createMain());
         contentContainer.appendChild(createFooter());
-    
+
+        setupNavigation();
     }
 
 
