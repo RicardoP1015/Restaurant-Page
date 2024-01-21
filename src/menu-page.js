@@ -9,6 +9,7 @@ import { makeElement, setupNavigation } from './website';
 
 function createMenu() {
     const main = document.createElement('main');
+    main.classList.add('main-menu')
 
     const menuContainer = makeElement('div', 'menu-container', main);
     const chicaWrapper = makeElement('div', 'chica', menuContainer);

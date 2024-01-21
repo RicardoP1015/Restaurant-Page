@@ -7,7 +7,7 @@
 }
 
 #content {
-    /*background-image: url(/src/assets/fnafFloor.png);*/
+    background-image: url(/src/assets/fnafFloor.png);
     background-size: 5%;
 }
 
@@ -179,6 +179,8 @@ header {
 
 .fnaf-img {
     width: 250px;
+    background-color: #171515c4;
+    margin-left: 10px;
 }
 
 .about-animatronic {
@@ -226,7 +228,8 @@ header {
     grid-template-columns: 1fr 1fr;
     padding: 15px;
     gap: 20px;
-    background-color: red;
+    background-size: cover;
+    background-position: center;
 }
 
 .menu-item {
@@ -239,29 +242,43 @@ header {
     background-color: brown;
     height: 250px;
     width: 250px;
+    border: 3px solid #f1f1f1c2;
 }
 
 .menu-item h3 {
     font-size: 25px;
+    background-color: #171515c4;
+    padding: 5px 15px;
+    color: #f1f1f1c2;
 }
 
 .menu-item p {
     font-size: 17px;
     padding: 15px;
+    background-color: #171515c4;
+    color: #f1f1f1c2;
 }
 
 .chica {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: yellow;
 }
 
 .chica h3 {
     text-align: center;
     font-size: 30px;
+    background-color: #171515c4;
+    color: #f1f1f1c2;
+    margin-left: 10px;
 }
 
 .menu-container .chica .fnaf-img {
     width: 300px;
+}
+
+.main-menu {
+    background-image: url(/src/assets/fanfEatArea.webp);
+    background-position: center;
+    background-size: cover;
 }
