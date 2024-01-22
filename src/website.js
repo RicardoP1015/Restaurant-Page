@@ -1,5 +1,6 @@
 import { loadHomePage } from "./home-page";
 import loadMenuPage from "./menu-page";
+import loadOrderPage from "./order-page";
 
 
 const makeElement = (elem, cl, parent, text, attributeName, attributeValue) => {
@@ -34,11 +35,16 @@ function setupNavigation() {
 
     const menuButton = document.getElementById('menuBtn');
     if (menuButton) {
-
         menuButton.addEventListener('click', loadMenuPage);
 }
+
+    const orderButton = document.getElementById('orderBtn');
+    if (orderButton) {
+        orderButton.addEventListener('click', loadOrderPage)
+    }
 }
 
 
 export  { makeElement, setupNavigation };
+
 
