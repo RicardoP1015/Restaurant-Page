@@ -7,7 +7,7 @@
 }
 
 #content {
-    /*background-image: url(/src/assets/fnafFloor.png);*/
+    background-image: url(/src/assets/fnafFloor.png);
     background-size: 5%;
 }
 
@@ -286,6 +286,10 @@ header {
 .order-wrapper {
     display: flex;
     justify-content: center;
+    background-image: url(/src/assets/FnafMainBg.webp);
+    background-position: center;
+    align-items: center;
+    background-size: cover;
 }
 
 .foxy-wrapper {
@@ -300,34 +304,47 @@ header {
     align-items: center;
 }
 
+.order-header {
+    font-size: 30px;
+    color: #f1f1f1c2;
+    background-color: #171515c4;
+    padding: 5px;
+}
+
 .foxy-img {
-    background-color: red;
-    width: 300px;
     height: 600px;
 }
 
 .bonnie-img {
-    background-color: blue;
-    width: 300px;
     height: 600px;
 }
 
-form {
+.order-form {
     display: flex;
     flex-direction: column;
-    background-color: antiquewhite;
+    background-image: url(/src/assets/orderFnaf.webp);
     padding: 20px;
-    margin: 0 15px;
+    margin: 15px;
+    background-size: 220%;
+    background-position-x: 51%;
+    background-position-y: 40%;
+    border: 3px solid black;
 }
 
-form h2 {
+.order-form h2 {
     text-align: center;
-    font-size: 40px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: transparent;
 }
 
 label {
     font-size: 30px;
+    background-color: #171515c4;
+    color: #f1f1f1c2;
+    width: fit-content;
+    padding: 5px;
+    margin-bottom: 5px;
 }
 
 .order-inputs {
@@ -337,12 +354,15 @@ label {
     font-size: 20px;
     padding: 0px 5px;
     cursor: pointer;
+    background-color: #171515c4;
+    color: #f1f1f1c2;
 }
 
 .sub-btn {
     height: 40px;
     font-size: 25px;
-    background-color: white;
+    background-color: #171515c4;
+    color: #f1f1f1c2;
     border: 1px solid;
     margin-top: 200px;
     cursor: pointer;
