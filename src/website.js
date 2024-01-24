@@ -1,7 +1,7 @@
 import { loadHomePage } from "./home-page";
 import loadMenuPage from "./menu-page";
 import loadOrderPage from "./order-page";
-
+import loadContactPage from "./contact-page";
 
 const makeElement = (elem, cl, parent, text, attributeName, attributeValue) => {
     const dom = document.createElement(elem);
@@ -41,6 +41,11 @@ function setupNavigation() {
     const orderButton = document.getElementById('orderBtn');
     if (orderButton) {
         orderButton.addEventListener('click', loadOrderPage)
+    }
+
+    const contactButton = document.getElementById('contactBtn');
+    if (contactButton) {
+        contactButton.addEventListener('click', loadContactPage);
     }
 }
 

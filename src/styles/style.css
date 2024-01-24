@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    background-color: black;
+}
+
 #content {
     background-image: url(/src/assets/fnafFloor.png);
     background-size: 5%;
@@ -179,7 +183,6 @@ header {
 
 .fnaf-img {
     width: 250px;
-    background-color: #171515c4;
     margin-left: 10px;
 }
 
@@ -263,6 +266,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .chica h3 {
@@ -270,11 +274,12 @@ header {
     font-size: 30px;
     background-color: #171515c4;
     color: #f1f1f1c2;
-    margin-left: 10px;
+    width: fit-content;
+    padding: 5px;
 }
 
 .menu-container .chica .fnaf-img {
-    width: 300px;
+    width: 400px;
 }
 
 .main-menu {
@@ -366,4 +371,52 @@ label {
     border: 1px solid;
     margin-top: 200px;
     cursor: pointer;
+}
+
+.freddy-wrapper {
+    width: 350px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.freddy-wrapper h3 {
+    font-size: 30px;
+}
+
+.freddy-img {
+    opacity: 85%;
+}
+
+.loc-img {
+    border: 3px solid #f1f1f1c2;
+    margin-top: 10px;
+    width: 600px;
+    height: 600px;
+    opacity: 85%;
+}
+
+.contact-section  {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 160px;
+    background-image: url('/src/assets/contactBg.webp');
+    background-position: center;
+    background-size: 115%;
+}
+
+.contact-headers {
+    font-size: 30px;
+    background-color:  #171515c4;
+    color: #f1f1f1c2;
+    padding: 5px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px 0;
 }
