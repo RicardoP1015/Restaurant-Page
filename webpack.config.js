@@ -2,11 +2,13 @@ const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: "./src/index.js",
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Restaurant Page',
-            template: 'src/template.html'
+            template: 'src/template.html',
+            filename: 'index.html'
         }),
     ],
     output: {
